@@ -54,7 +54,8 @@ class SplashScreenState extends State<SplashScreen> {
 class ScaleRoute extends PageRouteBuilder {
   final Widget page;
   ScaleRoute({this.page})
-      : super(transitionDuration: Duration(milliseconds: 350),
+      : super(
+          transitionDuration: Duration(milliseconds: 350),
           pageBuilder: (
             BuildContext context,
             Animation<double> animation,
@@ -67,9 +68,7 @@ class ScaleRoute extends PageRouteBuilder {
             Animation<double> secondaryAnimation,
             Widget child,
           ) =>
-          FadeTransition(
-                opacity: animation,
-                child: child),
+              FadeTransition(opacity: animation, child: child),
         );
 }
 
@@ -89,7 +88,7 @@ class HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Material(
         child: Center(
-            child: Text("HELLO!",
+            child: Text("Main page",
                 style: TextStyle(color: Colors.black, fontSize: 40))));
   }
 }
